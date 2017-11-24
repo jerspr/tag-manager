@@ -52,7 +52,7 @@
                                 <form action="#" class="search_form" id="formBuscar">
                                     <input type="button" value="Iniciar Sesión" class="btn btn-primary">
                                     <input type="text" placeholder="Text to Search" id="textoInput">
-                                    <input type="submit" value="">
+                                    <input type="submit" value="" onclick="eventBuscar('textoInput')">
                                 </form>
                             </div>
                         </div>
@@ -549,6 +549,18 @@
                     'label': 'jesser'
                 });
             }
+
+            function eventBuscar(e){
+                dataLayer.push({
+                    'event': 'capacitacionEvent',
+                    'category': 'Capacitaciones - Home',
+                    'action': 'Buscar en la Web',
+                    'label': 'Keywords: ' + document.getElementById(e).value
+                });
+
+                return false;
+            }
+
         </script>
     </body>
 </html>
