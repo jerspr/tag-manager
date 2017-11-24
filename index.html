@@ -113,16 +113,16 @@
                             <div class="content_top_right">
                                 <ul class="featured_nav wow fadeInDown">
                                     <li><img src="images/300x215x1.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick()">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick(1)">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x2.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick()">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick(2)">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x3.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick()">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick(3)">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x4.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick()">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick(4)">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                 </ul>
                             </div>
@@ -561,34 +561,16 @@
                 return false;
             }
 
-            function promotionClick(){
+            function promotionClick(id){
                 dataLayer.push({
                     'event': 'promotionClick',
                     'ecommerce': {
                         'promoClick': {
                             'promotions': [
                                 {
-                                   'id': '1',
+                                   'id': id,
                                    'name': 'Site Templates and Banners for $3',
-                                   'position': 'Posicion 1',
-                                   'creative': 'http://templates-prueba.com/'
-                                },
-                                {
-                                   'id': '2',
-                                   'name': 'Site Templates and Banners for $3',
-                                   'position': 'Posicion 2',
-                                   'creative': 'http://templates-prueba.com/'
-                                },
-                                {
-                                   'id': '3',
-                                   'name': 'Site Templates and Banners for $3',
-                                   'position': 'Posicion 3',
-                                   'creative': 'http://templates-prueba.com/'
-                                },
-                                {
-                                   'id': '4',
-                                   'name': 'Site Templates and Banners for $3',
-                                   'position': 'Posicion 4',
+                                   'position': 'Posicion '+id,
                                    'creative': 'http://templates-prueba.com/'
                                 }
                             ]
